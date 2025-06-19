@@ -1,0 +1,9 @@
+﻿{
+	"name": "HideOpenLuggage",
+	"version_number": "0.1.0",
+	"website_url": "https://github.com/darmuh/HideOpenLuggage",
+	"description": "Simple mod that hides luggage bags that have already been opened. Instantly hide upon opening or set to a configurable delay",
+	"dependencies": [
+		"BepInEx-BepInExPack_PEAK-5.4.2403"
+	]
+}

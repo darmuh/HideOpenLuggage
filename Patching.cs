@@ -5,7 +5,7 @@ using UnityEngine;
 namespace HideOpenLuggage
 {
     [HarmonyPatch(typeof(Luggage), "OpenLuggageRPC")]
-    public class StartRoundAwake
+    public class OpenLuggagePatch
     {
         internal static WaitForSeconds timeToDestroy = new(ModConfig.TimeToHide.Value);
 
@@ -20,7 +20,7 @@ namespace HideOpenLuggage
             yield return null;
             yield return timeToDestroy;
             Object.Destroy(gameObj);
-            Plugin.Spam($"{gameObj.name} destroyed after timer - {ModConfig.TimeToHide.Value}!");
+            Plugin.Log.LogDebug($"{gameObj.name} destroyed after timer - {ModConfig.TimeToHide.Value}!");
         }
     }
 }

@@ -12,10 +12,10 @@ namespace HideOpenLuggage
 
         public static void Init()
         {
-            Plugin.Log.LogInfo("Binding configuration settings");
+            Plugin.Log.LogInfo("Initializing config");
             DeveloperLogging = MakeBool(Plugin.instance.Config, "Debug", "DeveloperLogging", false, "Enable or Disable developer logging for this mod. (this will fill your log file FAST)");
             TimeToHide = MakeClampedFloat(Plugin.instance.Config, "Settings", "TimeToHide", 0f, "Use this config item to set how long after opening the luggage until it should be hidden (destroyed).\nThe default, 0, will hide the luggage bag immediately after opening", 0f, 60f);
-
+            Plugin.Log.LogInfo("Config has been initialized");
         }
 
         public static ConfigEntry<bool> MakeBool(ConfigFile ModConfig, string section, string configItemName, bool defaultValue, string configDescription)

@@ -13,7 +13,7 @@ namespace HideOpenLuggage
         {
             public const string PLUGIN_GUID = "com.github.darmuh.HideOpenLuggage";
             public const string PLUGIN_NAME = "HideOpenLuggage";
-            public const string PLUGIN_VERSION = "0.1.0";
+            public const string PLUGIN_VERSION = "0.1.1";
         }
 
         internal static ManualLogSource Log = null!;
